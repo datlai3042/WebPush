@@ -15,7 +15,7 @@
         let push = await sw.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey:
-            'BBZY7Q3KEtZArAAWMLi_qzWHbH4vAoqPpIXnRhmlUaw0PVs1Kt_2fgLhuaVI5i8MWASBKx3d6W6UoH2U3qChw9U'
+          'BAJw6OLzvPeND1T6ZcU5CmCV8GMq5JxxrSqGwxuFAfVU86HL9xw31f-nCTHuF_8qOtYswbqMYJfKiJlFbEzAC34'
         });
         console.log(JSON.stringify(push));
       }
@@ -23,6 +23,8 @@
       if ('serviceWorker' in navigator) {
         addEventListener('load', async () => {
           let sw = await navigator.serviceWorker.register('./sw.js');
+        console.log(JSON.stringify(sw));
+
           console.log(sw);
         });
       }

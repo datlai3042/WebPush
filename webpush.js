@@ -1,11 +1,13 @@
 const webpush = require('web-push');
 
+
+let result = webpush.generateVAPIDKeys()
+console.log({result})
 // VAPID keys should only be generated only once.
 const vapidKeys = {
-  publicKey:
-    'BBZY7Q3KEtZArAAWMLi_qzWHbH4vAoqPpIXnRhmlUaw0PVs1Kt_2fgLhuaVI5i8MWASBKx3d6W6UoH2U3qChw9U',
-  privateKey: 'CZtf_JUxmXkCKbzwaKedPPO9BFC99U2rk-GUYDbYAa8'
-};
+publicKey: 'BAJw6OLzvPeND1T6ZcU5CmCV8GMq5JxxrSqGwxuFAfVU86HL9xw31f-nCTHuF_8qOtYswbqMYJfKiJlFbEzAC34',
+  privateKey: '5C60gkItEHcn9paB6SYWf2fri1_bZN2xXGZVzasc-Pw'
+ };
 
 webpush.setVapidDetails(
   'mailto:example@yourdomain.org',
@@ -23,3 +25,5 @@ const pushSubscription = {
 };
 
 webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
+
+

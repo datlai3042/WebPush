@@ -1,34 +1,19 @@
 const title = 'Actions Notification';
 
 const options = {
+  body: 'How are you doing? )',
+  image: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?cs=srgb&dl=pexels-kellie-churchman-371878-1001682.jpg&fm=jpg',
+  icon: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?cs=srgb&dl=pexels-kellie-churchman-371878-1001682.jpg&fm=jpg',
+  badge: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?cs=srgb&dl=pexels-kellie-churchman-371878-1001682.jpg&fm=jpg',
   actions: [
     {
-      action: 'coffee-action',
-      type: 'button',
-      title: 'Coffee',
-      icon: '/images/demos/action-1-128x128.png',
-    },
-    {
-      action: 'doughnut-action',
-      type: 'button',
-      title: 'Doughnut',
-      icon: '/images/demos/action-2-128x128.png',
-    },
-    {
-      action: 'gramophone-action',
-      type: 'button',
-      title: 'Gramophone',
-      icon: '/images/demos/action-3-128x128.png',
-    },
-    {
-      action: 'atom-action',
-      type: 'button',
-      title: 'Atom',
-      icon: '/images/demos/action-4-128x128.png',
-    },
+      action: 'reply',
+      type: 'text',
+      title: 'Reply',
+      icon: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?cs=srgb&dl=pexels-kellie-churchman-371878-1001682.jpg&fm=jpg',
+    }
   ],
 };
-
 self.addEventListener('push', () => {
   self.registration.showNotification(title, options);
 });

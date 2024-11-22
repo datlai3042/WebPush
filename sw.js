@@ -23,3 +23,8 @@ self.addEventListener("notificationclick", event => {
   console.log({event})
 
 })
+
+self.addEventListener("reply", event => {
+  console.log({eventReply: event})
+
+})

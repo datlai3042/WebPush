@@ -17,3 +17,9 @@ const options = {
 self.addEventListener('push', () => {
   self.registration.showNotification(title, options);
 });
+
+
+self.addEventListener("notificationclick", event => {
+  console.log({event})
+
+})

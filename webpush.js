@@ -10,7 +10,7 @@ const vapidKeys = {
 };
 
 webpush.setVapidDetails(
-  "mailto:example@yourdomain.org",
+  "mailto:datlai304@gmail.com",
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
@@ -26,15 +26,18 @@ const pushSubscription = {
     auth: "Bxj4DxFPm0ljmncgTd5hyg",
   },
 };
-const v2 = {
+
+const fix = {
   endpoint:
-    "https://fcm.googleapis.com/fcm/send/fPuOmrAJ51Q:APA91bH_ktJHhB6vZnVwGLdUG6t3g6AlS3IE2droH8n_6gJo6EDvC9bIxp2kU99YqZ4XmYhZr3tl5fF1AqXfMk_5pET2aEmQuioG08P-ZFdpcZz89v7G09uMyVhzXVXSwQa2wPwYkFtU",
+    "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABnPwcVrzUCOW629inYQcTtmz_uDOFlPwDIm9EZsp7UD79AhGFokVCnwJagL6sG7EIK9TX59DJjtS4wU2setLYK96pKXycmkJwyjeKfIWBcSGrpsFAj3aZM4yw2Q5WpiBD8T8pN-qbRQT-K_9sDSHUOUwsXjG1zDZQCsL4A43UCFNTQKic",
   expirationTime: null,
   keys: {
+    auth: "gICk3jKeqDm51znREXCRgg",
     p256dh:
-      "BBFsy_WCbmsRVafani-Ktkium9MZUehvhxOVRCKnK87hP33gK_Z1qHPT_sl5vT5s-3XmNSTbt_Xp2w-RkBK0Fhg",
-    auth: "3vTWyvpffnLdqZq8z9C4PA",
+      "BFeA_YbmCyJ5zj9X0DFBxFiqqianUfdYz5Bw9BDKOqUedzXiP5XTZnLxPQkh40hAXPt6gFO_Kk4wVF24AN06evA",
   },
 };
+
+
 
 webpush.sendNotification(pushSubscription, "Your Push Payload Text");
